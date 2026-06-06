@@ -30,10 +30,10 @@ Lbl M6
 300→W:35→C:round((270/6),0)→S:Goto R3
 
 :"Enter custom brew ratio
-Lbl S
+Lbl CR
 ClrHome
-Input "Enter ratio 1:x",R
-(1/R)->R
+Input "Ratio 1:x",R
+(1/R)→R
 
 :" Calc water/coffee dosage
 Lbl W3
@@ -48,18 +48,17 @@ End
 :" Serving size 
 Lbl R3
 ClrHome
-Disp "Def. serv sz (ml):",S
-Disp "(0 to accept default)"
-Input "Serving Size",T
-If T<>0:
-:T->S
+Disp "Default (ml):",S
+Disp "(0 to accept)"
+Input "Serving Size?",T
+If T≠0:T→S
 
 :" Display calculated dosage, caffeine, etc.
 ClrHome
-1→L:Output(L,1,"Coffee:"):Output(L,9,C):Output(L,14,"g")
-2→L:Output(L,2,"Water:"):Output(L,9,W):Output(L,14,"ml")
-3→L:Output(L,2,"Brews:"):Output(L,9,round(W-(C*2),0)):Output(L,14,"ml")
-4→L:Output(L,3,"Srvs:"):Output(L,9,round((W-(C*2))/S,1))
+1→L:Output(L,2,"Coffee:"):Output(L,10,C):Output(L,14,"g")
+2→L:Output(L,3,"Water:"):Output(L,10,W):Output(L,14,"ml")
+3→L:Output(L,3,"Brews:"):Output(L,10,round(W-(C*2),0)):Output(L,14,"ml")
+4→L:Output(L,4,"Srvs:"):Output(L,10,round((W-(C*2))/S,1))
 5→L:Output(L,1,"Serv sz:"):Output(L,10,S):Output(L,14,"ml")
 6→L:Output(L,1,"Arabica:"):Output(L,10,round((C*12)/(W/S),0)):Output(L,14,"mg")
 7→L:Output(L,1,"Robusta:"):Output(L,10,round((C*22)/(W/S),0)):Output(L,14,"mg")
