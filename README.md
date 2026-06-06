@@ -1,11 +1,9 @@
 # brewista
 Coffee brew ratio app for Casio and TI-84 calculators. 
 
-This app is written in BASIC language for TI-84 series calculators (84+, CE, and likely the Evo) and the Casio fx-9860Giii, fx-9750Giii, fx-CG50 and similar calculators. It calculates the optimal dosage of water and coffee for various brewing methods.  Additionally, it calculates the amount of the finished brew, as well as caffeine per serving.
 
 ## Installation
 
-See the manufacturer's documentation for help with installing BASIC programs on your particular model of calculator.
 
 ### TI 84
 Download the `.8xp` file and install from a PC or Mac using TI Connect CE software.
@@ -24,14 +22,13 @@ Launch the program on your calculator. On the TI, press the `PRGM` key and selec
 ### Data Entry
 
 The program opens with the following screen:
-
-TODO pic
+![main menu screen](docs/main_menu.png)
 
 Choose *Water Needed* to calculate the water necessary for a given amount of ground coffee, or *Coffee Needed* to determine the proper amount of ground coffee for a given amount of water.
 
 The next screen displays a set of brewing methods.
 
-TODO pic
+![brewing method selection screen](docs/brew_menu.png)
 
 Choose a method, and the calculator determines the proper brew ratio for that style of brewing.
 
@@ -43,9 +40,11 @@ Choose a method, and the calculator determines the proper brew ratio for that st
 * *Moka 6-cup*: Coffee brewed in a 6-cup Moka Pot (ratio: approximately 8.5:1)
 * *Custom Ratio*: Enter a custom brew ratio (in parts water, i.e. X parts water to 1 part coffee)
 
+Next, you'll be asked for the amount of coffee or water you have to brew.  Enter an amount in g or in ml (for water, 1 milliliter weighs 1 gram).
+
 The next screen asks for a serving size (in ml). 
 
-TODO pic
+![serving size entry screen](docs/serv_size.png)
 
 Enter `0` to accept its default suggestion (usually 250 ml, but varies depending upon the chosen brewing method), or enter your own serving size.
 
@@ -53,9 +52,10 @@ Enter `0` to accept its default suggestion (usually 250 ml, but varies depending
 
 The calculator displays the following results for your brew:
 
+![results screen](docs/results.png)
+
 * *Coffee*: Dose of ground coffee in grams
 * *Water*: Dose of water in milliliters
-* *Brews*: Volume of brewed coffee in milliliters, taking into account absorption of water by the coffee grounds
 * *Srvs*: Number of servings given the volume of brewed coffee, and the chosen serving size
 * *Serv Sz*: Serving size in milliliters, as previously entered
 * *Arabica*: Caffeine per serving (in mg), assuming 100% Arabica beans
