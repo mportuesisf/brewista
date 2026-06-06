@@ -72,6 +72,6 @@ The calculator displays the following results for your brew:
 * *Arabica*: Caffeine per serving (in mg), assuming 100% Arabica beans
 * *Robusta*: Caffeine per serving (in mg), assuming 100% Robusta beans
 
-Note that the calculations for volume of brewed coffee and caffeine content are estimates based on averages, and will vary depending on the selection of coffee bean.
+Note that the calculations for volume of brewed coffee and caffeine content are approximations. The actual amounts will vary, depending on the selection of coffee bean.
 
 Press the `ENTER` (TI) or `EXE` key (Casio) to return to the main menu.
