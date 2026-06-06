@@ -1,19 +1,22 @@
 # brewista
-Coffee brew ratio app for Casio and TI-84 calculators, written in the BASIC language. 
 
-This app is available for TI-84 series calculators (84+, CE, and Evo) and the Casio fx-9860Giii, fx-9750Giii, fx-CG50 and similar calculators.
+Coffee brew ratio app for Casio and TI calculators, written in the BASIC language.
 
 It calculates the optimal dosage of water and coffee for various brewing methods. Additionally, it calculates the amount of the finished brew, as well as caffeine per serving.
 
 ## Installation
 
+This app is available for TI-84 series calculators (84+, CE, and Evo) and the Casio fx-9860Giii, fx-9750Giii, fx-CG50 and similar programmable graphing calculators.
+
 See the documentation the came with your calculator for more details on installing software from a PC or Mac.
 
 ### TI 84
-Download the `.8xp` file.  Using a USB cable, install from a PC or Mac using TI Connect CE software. 
+
+Download the `.8xp` file.  Using a USB cable, install from a PC or Mac using TI Connect CE software.
 
 ### Casio
-Download the `.g1m` file.  Using a USB cable, install from a PC or Mac into the @MainMem/PROGRAM folder in the calculator's storage. 
+
+Download the `.g1m` file.  Using a USB cable, install from a PC or Mac into the `@MainMem/PROGRAM` folder in the calculator's storage.
 
 ## Usage
 
@@ -25,7 +28,7 @@ Launch the program on your calculator. On the TI, press the `PRGM` key and selec
 
 ### Data Entry
 
-The program opens with the following screen:
+The program opens with the main menu screen:
 
 ![main menu screen](docs/main_menu.png)
 
@@ -49,7 +52,7 @@ Next, you'll be asked for the amount of coffee or water you have to brew.  Enter
 
 If you chose one of the Moka Pot brew methods, you will not be asked for an amount, as the water and coffee measures are fixed by the size of the Moka Pot.
 
-The next screen asks for a serving size (in ml). 
+The next screen asks for a serving size (in ml).
 
 ![serving size entry screen](docs/serv_size.png)
 
@@ -69,6 +72,6 @@ The calculator displays the following results for your brew:
 * *Arabica*: Caffeine per serving (in mg), assuming 100% Arabica beans
 * *Robusta*: Caffeine per serving (in mg), assuming 100% Robusta beans
 
-Note that the calculations for volume of brewed coffee and caffeine content are estimates based on averages, and will vary depending on the selection of coffee bean.
+Note that the calculations for volume of brewed coffee and caffeine content are approximations. The actual amounts will vary, depending on the selection of coffee bean.
 
 Press the `ENTER` (TI) or `EXE` key (Casio) to return to the main menu.
