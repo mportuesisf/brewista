@@ -1,11 +1,11 @@
 # brewista
 Coffee brew ratio app for Casio and TI-84 calculators. 
 
-This app is written in BASIC language for TI-84 series calculators (84+, CE, and likely the Evo) and the Casio fx-9860Giii, fx-9750Giii, fx-CG50 and similar calculators. It calculates the optimal dosage of water and coffee for various brewing methods.  Also calculates the amount of the finished brew, as well as caffeine per serving.
+This app is written in BASIC language for TI-84 series calculators (84+, CE, and likely the Evo) and the Casio fx-9860Giii, fx-9750Giii, fx-CG50 and similar calculators. It calculates the optimal dosage of water and coffee for various brewing methods.  Additionally, it calculates the amount of the finished brew, as well as caffeine per serving.
 
 ## Installation
 
-See the manufuacturer's documentation for help with installing BASIC programs on your particular model of calculator.
+See the manufacturer's documentation for help with installing BASIC programs on your particular model of calculator.
 
 ### TI 84
 Download the `.8xp` file and install from a PC or Mac using TI Connect CE software.
@@ -55,7 +55,7 @@ The calculator displays the following results for your brew:
 
 * *Coffee*: Dose of ground coffee in grams
 * *Water*: Dose of water in milliliters
-* *Brews*: Volume of brewed coffee, taking into account absorption of water by the coffee grounds
+* *Brews*: Volume of brewed coffee in milliliters, taking into account absorption of water by the coffee grounds
 * *Srvs*: Number of servings given the volume of brewed coffee, and the chosen serving size
 * *Serv Sz*: Serving size in milliliters, as previously entered
 * *Arabica*: Caffeine per serving (in mg), assuming 100% Arabica beans
