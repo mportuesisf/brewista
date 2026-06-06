@@ -5,7 +5,7 @@ This app is written in BASIC language for TI-84 series calculators (84+, CE, and
 
 ## Installation
 
-See the manufuacturer's documentation for help with installing BASIC programs on your particular calculator.
+See the manufuacturer's documentation for help with installing BASIC programs on your particular model of calculator.
 
 ### TI 84
 Download the `.8xp` file and install from a PC or Mac using TI Connect CE software.
@@ -15,9 +15,11 @@ Install the `.txt` file from a PC or Mac into the appropriate folder.  See Casio
 
 ## Usage
 
+Brewista is an app to help you brew fresh, delicious and flavorful coffee.
+
 ### Getting Started
 
-Launch the program on your calculator. On the TI, press the `PRGM` key and select from the menu. On the Casio, press Menu, then `PRGM`, then select from the menu.
+Launch the program on your calculator. On the TI, press the `PRGM` key and select from the menu. On the Casio, press `MENU`, then select `PRGM`, then select the app from the menu.
 
 ### Data Entry
 
@@ -27,17 +29,19 @@ TODO pic
 
 Choose *Water Needed* to calculate the water necessary for a given amount of ground coffee, or *Coffee Needed* to determine the proper amount of ground coffee for a given amount of water.
 
-The next screen displays a set of brewing methods.  Choose one to determine the proper brew ratio for that style of brewing.
+The next screen displays a set of brewing methods.
 
 TODO pic
 
-* *Auto-drip*: automatic drip coffee makers (ratio: 18 parts water:1 part coffee by weight)
-* *Pour-over*: single serving pourovers, using a pourover dripper such as a Chemex, Hario V60 or Melitta (ratio: 16.6:1)
-* *French Press*: coffee steeped in a French press pot (ratio: 15:1)
+Choose a method, and the calculator determines the proper brew ratio for that style of brewing.
+
+* *Auto-drip*: Automatic drip coffee makers (ratio: 18 parts water:1 part coffee by weight)
+* *Pour-over*: Single serving pourovers, using a pourover dripper such as a Chemex, Hario V60 or Melitta (ratio: 16.6:1)
+* *French Press*: Coffee steeped in a French Press pot (ratio: 15:1)
 * *Cold Brew*: Cold brew coffee concentrate, brewed at room temperature or in the refrigerator for 12-24 hours (ratio: 5:1)
-* *Moka 3-cup*: coffee brewed in a 3-cup Moka Pot (ratio: approximately 8:1)
-* *Moka 6-cup*: coffee brewed in a 6-cup Moka Pot (ratio: approximately 8.5:1)
-* *Custom ratio*: Enter a custom brew ratio (in parts water, i.e. X parts water to 1 part coffee)
+* *Moka 3-cup*: Coffee brewed in a 3-cup Moka Pot (ratio: approximately 8:1)
+* *Moka 6-cup*: Coffee brewed in a 6-cup Moka Pot (ratio: approximately 8.5:1)
+* *Custom Ratio*: Enter a custom brew ratio (in parts water, i.e. X parts water to 1 part coffee)
 
 The next screen asks for a serving size (in ml). 
 
@@ -47,14 +51,16 @@ Enter `0` to accept its default suggestion (usually 250 ml, but varies depending
 
 ### Results
 
-The calculator displays the following results for your chosen brew:
+The calculator displays the following results for your brew:
 
-* *Coffee*: dose in grams
-* *Water*: dose in milliliters
+* *Coffee*: Dose of ground coffee in grams
+* *Water*: Dose of water in milliliters
 * *Brews*: Volume of brewed coffee, taking into account absorption of water by the coffee grounds
 * *Srvs*: Number of servings given the volume of brewed coffee, and the chosen serving size
 * *Serv Sz*: Serving size in milliliters, as previously entered
 * *Arabica*: Caffeine per serving (in mg), assuming 100% Arabica beans
 * *Robusta*: Caffeine per serving (in mg), assuming 100% Robusta beans
+
+Note that the calculations for volume of brewed coffee and caffeine content are estimates based on averages, and will vary depending on the selection of coffee bean.
 
 Press the `ENTER` (TI) or `EXE` key (Casio) to return to the main menu.
