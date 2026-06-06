@@ -1,0 +1,63 @@
+Lbl A
+ClrText
+0->W:0->B:0->R:0->C:0->S:0->L:0->Z
+
+' Data Entry
+ClrText
+Menu "Select Container","White Lid",F,"Silver Lid",G,"Daiso Canister",H,"Direct Measure",I,"Quit",E
+Goto A
+Lbl F
+381.7->B:Goto I
+Lbl G
+416.5->B:Goto I
+Lbl H
+204.6->B
+Lbl I
+"Weight (g):"?->W
+W-B->R
+If R<0:Then ClrText
+"ERR: Weight < container"
+Goto T
+IfEnd
+
+' Display remaining coffee and brew counts
+ClrText
+8->X:1->L:Locate 1,L,"Total:"
+Locate 7,L,R
+Locate 14,L,"g"
+3->L:55->S:Locate 1,L,"   1L:"
+Locate X,L,Int (R/S)
+Locate X+3,L,"r:"
+Locate X+6,L,R-Int (R/S)*S
+Locate X+11,L,"g"
+4->L:28->S:Locate 1,L,"500ml:"
+Locate X,L,Int (R/S)
+Locate X+3,L,"r:"
+Locate X+6,L,R-Int (R/S)*S
+Locate X+11,L,"g"
+5->L:18->S:Locate 1,L," pour:"
+Locate X,L,Int (R/S)
+Locate X+3,L,"r:"
+Locate X+6,L,R-Int (R/S)*S
+Locate X+11,L,"g"
+6->L:19->S:Locate 1,L,"moka3:"
+Locate X,L,Int (R/S)
+Locate X+3,L,"r:"
+Locate X+6,L,R-Int (R/S)*S
+Locate X+11,L,"g"
+7->L:100->S:Locate 1,L," cold:"
+Locate X,L,Int (R/S)
+Locate X+3,L,"r:"
+Locate X+6,L,R-Int (R/S)*S
+Locate X+11,L,"g"
+
+' Wait for a key
+Lbl T
+For 1->Y To 20 Step 1:Next
+Do
+LpWhile Getkey=0
+Goto A
+
+Lbl E
+ClrText
+Stop
