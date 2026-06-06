@@ -1,12 +1,12 @@
 # brewista
 
-Coffee brew ratio app for Casio and TI-84 calculators, written in the BASIC language.
-
-This app is available for TI-84 series calculators (84+, CE, and Evo) and the Casio fx-9860Giii, fx-9750Giii, fx-CG50 and similar programmable graphing calculators.
+Coffee brew ratio app for Casio and TI calculators, written in the BASIC language.
 
 It calculates the optimal dosage of water and coffee for various brewing methods. Additionally, it calculates the amount of the finished brew, as well as caffeine per serving.
 
 ## Installation
+
+This app is available for TI-84 series calculators (84+, CE, and Evo) and the Casio fx-9860Giii, fx-9750Giii, fx-CG50 and similar programmable graphing calculators.
 
 See the documentation the came with your calculator for more details on installing software from a PC or Mac.
 
@@ -28,7 +28,7 @@ Launch the program on your calculator. On the TI, press the `PRGM` key and selec
 
 ### Data Entry
 
-The program opens with the following screen:
+The program opens with the main menu screen:
 
 ![main menu screen](docs/main_menu.png)
 
