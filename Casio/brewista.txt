@@ -1,0 +1,141 @@
+Lbl A
+ClrText
+0->W:0->B:0->R:0->C:0->S:0->L:0->Z
+Menu "Brewista","Remaining Brews",B,"Water Needed",C,"Coffee Needed",D,"Quit",E
+Goto A
+
+' Remaining Brews
+Lbl B
+ClrText
+Menu "Select Container","White Lid",F,"Silver Lid",G,"Daiso Canister",H,"Direct Measure",I
+Goto B
+Lbl F
+381.7->B:Goto I
+Lbl G
+416.5->B:Goto I
+Lbl H
+204.6->B
+Lbl I
+"Weight (g):"?->W
+W-B->R
+If R<0:Then ClrText
+"Invalid input"
+Goto B
+IfEnd
+
+' Display remaining coffee and brew counts
+ClrText
+8->X:1->L:Locate 1,L,"Total:"
+Locate 7,L,R
+Locate 14,L,"g"
+3->L:55->S:Locate 1,L,"   1L:"
+Locate X,L,Int (R/S)
+Locate X+3,L,"r:"
+Locate X+6,L,R-Int (R/S)*S
+Locate X+11,L,"g"
+4->L:28->S:Locate 1,L,"500ml:"
+Locate X,L,Int (R/S)
+Locate X+3,L,"r:"
+Locate X+6,L,R-Int (R/S)*S
+Locate X+11,L,"g"
+5->L:18->S:Locate 1,L," pour:"
+Locate X,L,Int (R/S)
+Locate X+3,L,"r:"
+Locate X+6,L,R-Int (R/S)*S
+Locate X+11,L,"g"
+6->L:19->S:Locate 1,L,"moka3:"
+Locate X,L,Int (R/S)
+Locate X+3,L,"r:"
+Locate X+6,L,R-Int (R/S)*S
+Locate X+11,L,"g"
+7->L:100->S:Locate 1,L," cold:"
+Locate X,L,Int (R/S)
+Locate X+3,L,"r:"
+Locate X+6,L,R-Int (R/S)*S
+Locate X+11,L,"g"
+Goto T
+
+' Water or coffee dosage needed? 
+Lbl C
+0->Z
+Goto P
+Lbl D
+1->Z
+Goto P
+
+' Choose brew type to establish ratio
+Lbl P
+ClrText
+250->S
+Menu "Select Brew Type","Auto-drip",J,"Pour-over",K,"French Press",L,"Cold Brew",M,"Moka 3-cup",N,"Moka 6-cup",O,"Custom Ratio",S
+Goto P
+Lbl J
+(1/18)->R:Goto Q
+Lbl K
+(1/16.66666667)->R:Goto Q
+Lbl L
+(1/15)->R:Goto Q
+Lbl M
+(1/5)->R:60->S:Goto Q
+Lbl N
+150->W:19->C:RndFix(130/3,0)->S:Goto R
+Lbl O
+300->W:35->C:RndFix(270/6,0)->S:Goto R
+
+' Enter custom brew ratio
+Lbl S
+ClrText
+Locate 1,4,"Enter ratio 1:x"
+?->R
+(1/R)->R
+
+' Calc water/coffee dosage
+Lbl Q
+If Z=1:Then "Water (g):"?->W
+RndFix(R*W,1)->C
+Else "Coffee (g):"?->C
+RndFix(C/R,0)->W
+IfEnd
+
+' Serving size 
+Lbl R
+ClrText
+Locate 1,3,"Def. serv sz (ml):"
+Locate 1,4,S
+Locate 1,5,"(0 to accept default)"
+"Serving Size"?->T
+If T<>0:Then T->S:IfEnd
+
+' Display calculated dosage, caffeine, etc.
+ClrText
+10->X:1->L:Locate 2,L,"Coffee:"
+Locate X,L,C
+Locate X+5,L,"g"
+2->L:Locate 3,L,"Water:"
+Locate X,L,W
+Locate X+5,L,"ml"
+3->L:Locate 3,L,"Brews:"
+Locate X,L,RndFix(W-(C*2),0)
+Locate X+5,L,"ml"
+4->L:Locate 4,L,"Srvs: "
+Locate X,L,RndFix((W-(C*2))/S,1)
+5->L:Locate 1,L,"Caff in"
+Locate X,L,S
+Locate X+5,L,"ml srv:"
+6->L:Locate 1,L,"Arabica:"
+Locate X,L,RndFix((C*12)/(W/S),0)
+Locate X+5,L,"mg"
+7->L:Locate 1,L,"Robusta:"
+Locate X,L,RndFix((C*22)/(W/S),0)
+Locate X+5,L,"mg"
+
+' Wait for a key
+Lbl T
+For 1->Y To 20 Step 1:Next
+Do
+LpWhile Getkey=0
+Goto A
+
+Lbl E
+ClrText
+Stop
