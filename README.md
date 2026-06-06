@@ -2,7 +2,7 @@
 
 Coffee brew ratio app for Casio and TI-84 calculators, written in the BASIC language.
 
-This app is available for TI-84 series calculators (84+, CE, and Evo) and the Casio fx-9860Giii, fx-9750Giii, fx-CG50 and similar calculators.
+This app is available for TI-84 series calculators (84+, CE, and Evo) and the Casio fx-9860Giii, fx-9750Giii, fx-CG50 and similar programmable graphing calculators.
 
 It calculates the optimal dosage of water and coffee for various brewing methods. Additionally, it calculates the amount of the finished brew, as well as caffeine per serving.
 
@@ -16,7 +16,7 @@ Download the `.8xp` file.  Using a USB cable, install from a PC or Mac using TI 
 
 ### Casio
 
-Download the `.g1m` file.  Using a USB cable, install from a PC or Mac into the @MainMem/PROGRAM folder in the calculator's storage.
+Download the `.g1m` file.  Using a USB cable, install from a PC or Mac into the `@MainMem/PROGRAM` folder in the calculator's storage.
 
 ## Usage
 
