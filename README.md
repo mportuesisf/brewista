@@ -1,15 +1,17 @@
 # brewista
 Coffee brew ratio app for Casio and TI-84 calculators. 
 
+This app is written in BASIC language for TI-84 series calculators (84+, CE, and likely the Evo) and the Casio fx-9860Giii, fx-9750Giii, fx-CG50 and similar calculators. It calculates the optimal dosage of water and coffee for various brewing methods. Additionally, it calculates the amount of the finished brew, as well as caffeine per serving.
 
 ## Installation
 
+See the documentation the came with your calculator for more details on installing software from a PC or Mac.
 
 ### TI 84
-Download the `.8xp` file and install from a PC or Mac using TI Connect CE software.
+Download the `.8xp` file.  Using a USB cable, install from a PC or Mac using TI Connect CE software. 
 
 ### Casio
-Install the `.txt` file from a PC or Mac into the appropriate folder.  See Casio's documentation for more details.
+Download the `.g1m` file.  Using a USB cable, install from a PC or Mac into the @MainMem/PROGRAM folder in the calculator's storage. 
 
 ## Usage
 
@@ -41,7 +43,9 @@ Choose a method, and the calculator determines the proper brew ratio for that st
 * *Moka 6-cup*: Coffee brewed in a 6-cup Moka Pot (ratio: approximately 8.5:1)
 * *Custom Ratio*: Enter a custom brew ratio (in parts water, i.e. X parts water to 1 part coffee)
 
-Next, you'll be asked for the amount of coffee or water you have to brew.  Enter an amount in g or in ml (for water, 1 milliliter weighs 1 gram).
+Next, you'll be asked for the amount of coffee or water you have to brew.  Enter an amount in grams (for water, 1 milliliter weighs 1 gram).  
+
+If you chose one of the Moka Pot brew methods, you will not be asked for an amount, as the water and coffee measures are fixed by the size of the Moka Pot.
 
 The next screen asks for a serving size (in ml). 
 
