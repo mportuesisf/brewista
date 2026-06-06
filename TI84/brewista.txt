@@ -1,0 +1,71 @@
+:"Main menu
+Lbl MN
+ClrHome:0→W:0→B:0→R:0→C:0→S:0→L
+Menu("Brewista","Water Needed",WN,"Coffee Needed",CN,"Quit",QA
+
+:"Water or coffee dosage needed? 
+Lbl WN
+0→M
+Goto W2
+:
+Lbl CN
+1→M
+
+:"Choose brew method to establish ratio
+Lbl W2
+ClrHome:250→S
+Menu("Select Brew Type","Auto-drip",AD,"Pour-over",PO,"French Press",FP,"Cold Brew",CB,"Moka 3-cup",M3,"Moka 6-cup",M6,"Custom Ratio",CR
+:"R: brew ratio, S: serving size ml, W: water ml, C: coffee g
+Lbl AD
+(1/18)→R::Goto W3
+Lbl PO
+(1/16.66666667)→R:Goto W3
+Lbl FP
+(1/15)→R:Goto W3
+Lbl CB
+(1/5)→R:60→S:Goto W3
+Lbl M3
+150→W:19→C:round((130/3),0)→S:Goto R3
+Lbl M6
+300→W:35→C:round((270/6),0)→S:Goto R3
+
+:"Enter custom brew ratio
+Lbl S
+ClrHome
+Input "Enter ratio 1:x",R
+(1/R)->R
+
+:" Calc water/coffee dosage
+Lbl W3
+If (M):Then
+Input "Water (g):",W
+round(R*W,1)→C
+Else
+Input "Coffee (g):",C
+round(C/R,0)→W
+End
+
+:" Serving size 
+Lbl R3
+ClrHome
+Disp "Def. serv sz (ml):",S
+Disp "(0 to accept default)"
+Input "Serving Size",T
+If T<>0:
+:T->S
+
+:" Display calculated dosage, caffeine, etc.
+ClrHome
+1→L:Output(L,1,"Coffee:"):Output(L,9,C):Output(L,14,"g")
+2→L:Output(L,2,"Water:"):Output(L,9,W):Output(L,14,"ml")
+3→L:Output(L,2,"Brews:"):Output(L,9,round(W-(C*2),0)):Output(L,14,"ml")
+4→L:Output(L,3,"Srvs:"):Output(L,9,round((W-(C*2))/S,1))
+5→L:Output(L,1,"Serv sz:"):Output(L,10,S):Output(L,14,"ml")
+6→L:Output(L,1,"Arabica:"):Output(L,10,round((C*12)/(W/S),0)):Output(L,14,"mg")
+7→L:Output(L,1,"Robusta:"):Output(L,10,round((C*22)/(W/S),0)):Output(L,14,"mg")
+Pause ""
+Goto MN
+
+Lbl QA
+ClrHome
+Return
