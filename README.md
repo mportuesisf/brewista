@@ -22,6 +22,7 @@ Launch the program on your calculator. On the TI, press the `PRGM` key and selec
 ### Data Entry
 
 The program opens with the following screen:
+
 ![main menu screen](docs/main_menu.png)
 
 Choose *Water Needed* to calculate the water necessary for a given amount of ground coffee, or *Coffee Needed* to determine the proper amount of ground coffee for a given amount of water.
